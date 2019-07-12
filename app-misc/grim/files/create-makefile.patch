@@ -1,6 +1,6 @@
-diff -ruN grim-1.2.0/Makefile grim-1.2.0-new/Makefile
+diff -ruN grim-1.2.0/Makefile grim-1.2.0-r1/Makefile
 --- grim-1.2.0/Makefile	1970-01-01 05:30:00.000000000 +0530
-+++ grim-1.2.0-new/Makefile	2019-07-12 18:38:35.554658383 +0530
++++ grim-1.2.0-r1/Makefile	2019-07-12 18:38:35.554658383 +0530
 @@ -0,0 +1,13 @@
 +.PHONY: clean install
 +
