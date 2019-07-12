@@ -12,12 +12,13 @@ SRC_URI="https://github.com/emersion/grim/releases/download/v${PV}/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="wayland"
+IUSE="wayland jpeg"
 REQUIRED_USE="wayland"
 
 DEPEND="
+	x11-libs/cairo
 	dev-libs/wayland
-	media-libs/libjpeg-turbo
+	jpeg? ( media-libs/libjpeg-turbo )
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
@@ -29,6 +30,6 @@ PATCHES=(
 src_configure() {
 	local emasonargs=(
 		-Dprefix=${EPREFIX}
-		)
+	)
 	meson_src_configure
 }
