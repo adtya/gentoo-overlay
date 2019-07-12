@@ -1,0 +1,26 @@
+diff -ruN Waybar-0.7.0/Makefile Waybar-0.7.0-r1/Makefile
+--- Waybar-0.7.0/Makefile	2019-06-22 21:47:16.000000000 +0530
++++ Waybar-0.7.0-r1/Makefile	2019-07-12 22:01:37.094497290 +0530
+@@ -1,20 +1,13 @@
+-.PHONY: build build-debug run clean default install
++.PHONY: clean install
+ 
+-default: run
++default: install
+ 
+ build:
+ 	meson build
+ 	ninja -C build
+ 
+-build-debug:
+-	meson build --buildtype=debug
+-	ninja -C build
+-
+ install: build
+ 	ninja -C build install
+ 
+-run: build
+-	./build/waybar
+-
+ clean:
+ 	rm -rf build
