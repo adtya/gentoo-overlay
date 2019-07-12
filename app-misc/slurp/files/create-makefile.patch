@@ -1,6 +1,6 @@
-diff -ruN slurp-1.2.0/Makefile slurp-1.2.0-new/Makefile
+diff -ruN slurp-1.2.0/Makefile slurp-1.2.0-r1/Makefile
 --- slurp-1.2.0/Makefile	1970-01-01 05:30:00.000000000 +0530
-+++ slurp-1.2.0-new/Makefile	2019-07-12 22:01:37.094497290 +0530
++++ slurp-1.2.0-r1/Makefile	2019-07-12 22:01:37.094497290 +0530
 @@ -0,0 +1,13 @@
 +.PHONY: clean install
 +
