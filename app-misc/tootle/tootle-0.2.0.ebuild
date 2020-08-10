@@ -3,7 +3,7 @@
 
 EAPI=7
 
-inherit meson
+inherit meson vala
 
 DESCRIPTION="GTK-based Mastodon client for Linux"
 HOMEPAGE="https://github.com/bleakgrey/tootle"
@@ -28,6 +28,10 @@ DEPEND="${RDEPEND}
 BDEPEND=""
 
 S="${WORKDIR}/tootle-${PV}"
+
+src_prepare() {
+	eapply_user
+}
 
 src_configure() {
 	local emasonargs=(
